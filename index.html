@@ -22,6 +22,14 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- Tailwind And DaisyUi Cdn Start -->
+    <!-- Custom Css Start -->
+    <style>
+        .active {
+            color: white;
+            background: #FF1F3D;
+        }
+    </style>
+    <!-- Custom Css End -->
     <!-- Tailwind CSS Configuration start-->
     <script>
         tailwind.config = {
@@ -56,20 +64,23 @@
     </nav>
     <!-- Navbar Start -->
     <!-- Header Section End -->
+
     <!-- Main Section Start -->
     <main>
         <!-- Category Menu Section start -->
         <nav id="category-container" class="flex justify-center gap-5 py-5">
             <div>
-                <button class="btn btn-small bg-[#FF1F3D] text-white">All</button>
+                <button id="activeAllBtn" onclick="loadVideo()" class="btn btn-small">All</button>
             </div>
         </nav>
-        <!-- Category Menu Section End -->
+        <!-- Categories Menu Section End -->
+
         <!-- Show video Section Start -->
         <section id="video-container" class="w-11/12 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
 
         </section>
         <!-- Show video Section End -->
+
     </main>
     <!-- Main Section End -->
 
