@@ -50,19 +50,30 @@
 
 <body class="font-Inter">
     <!-- Header Section Start -->
-    <!-- Navbar Start -->
-    <nav class="w-11/12 mx-auto py-4 border-b-2 border-gray-200 flex justify-between items-center">
-        <div class="logo">
-            <img src="assets/Logo.png" alt="">
-        </div>
-        <div class="sort">
-            <button class="btn py-2 px-4">Sort by view</button>
-        </div>
-        <div class="blog">
-            <button class="btn py-2 px-4 text-white bg-[#FF1F3D] ">Blog</button>
-        </div>
-    </nav>
-    <!-- Navbar Start -->
+    <header>
+        <!-- Navbar Start -->
+        <nav class="w-11/12 mx-auto py-4 border-b-2 border-gray-200 flex justify-between items-center">
+            <div class="logo">
+                <img src="assets/Logo.png" alt="">
+            </div>
+            <div class="sort">
+                <label class="input">
+                    <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none"
+                            stroke="currentColor">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.3-4.3"></path>
+                        </g>
+                    </svg>
+                    <input id="search-input" type="search" required placeholder="Search" />
+                </label>
+            </div>
+            <div class="blog">
+                <button class="btn py-2 px-4 text-white bg-[#FF1F3D] ">Sort by view</button>
+            </div>
+        </nav>
+        <!-- Navbar Start -->
+    </header>
     <!-- Header Section End -->
 
     <!-- Main Section Start -->
@@ -75,6 +86,12 @@
         </nav>
         <!-- Categories Menu Section End -->
 
+        <!-- loader Section start -->
+        <div id="loader" class="text-center py-10 hidden">
+            <span class="loading loading-bars loading-lg"></span>
+        </div>
+        <!-- loader Section End -->
+
         <!-- Show video Section Start -->
         <section id="video-container" class="w-11/12 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
 
@@ -83,7 +100,24 @@
 
     </main>
     <!-- Main Section End -->
+    <!-- Modal start -->
 
+    <!-- Open the modal using ID.showModal() method -->
+
+    <dialog id="videoDetails" class="modal">
+        <div class="modal-box">
+            <div id="details-container">
+
+            </div>
+            <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+    <!-- Modal start -->
     <!-- Custom Js File Start -->
     <script src="js/script.js"></script>
     <!-- Custom Js File End -->
